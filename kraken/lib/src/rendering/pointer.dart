@@ -80,9 +80,7 @@ mixin RenderPointerListenerMixin on RenderBox {
     /// pointers), or has its button pressed (for mouse pointers) at this widget's
     /// location.
     if (event is PointerDownEvent) {
-      if (entry.target is RenderBoxModel) {
-        GestureManager.instance().addTargetToList(entry.target as RenderBoxModel);
-      }
+      GestureManager.instance().addTargetToList(entry.target as RenderBoxModel);
     }
 
     if (onPointerDown != null && event is PointerDownEvent)
