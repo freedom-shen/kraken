@@ -52,6 +52,10 @@ class EventTarget {
     }
   }
 
+  List<String> getEventTypes() {
+    return eventHandlers.keys;
+  }
+
   @mustCallSuper
   void dispose() {
     elementManager.removeTarget(this);
