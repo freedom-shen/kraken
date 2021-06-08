@@ -52,8 +52,8 @@ class EventTarget {
     }
   }
 
-  List<String> getEventTypes() {
-    return eventHandlers.keys;
+  Map<String, List<EventHandler>> getEventHandlers() {
+    return eventHandlers;
   }
 
   @mustCallSuper
